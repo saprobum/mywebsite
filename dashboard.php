@@ -5,7 +5,6 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
-
 // Quick stats for this user
 $stmt = $pdo->prepare("SELECT COUNT(*) AS total FROM products WHERE user_id = ?");
 $stmt->execute([$_SESSION['user_id']]);
