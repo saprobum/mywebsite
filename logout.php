@@ -4,6 +4,8 @@ require 'session.php'; // just need the session, no DB connection needed
 // Clear all session variables
 $_SESSION = [];
 
+
+
 // Delete the session cookie itself (not just the data)
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
